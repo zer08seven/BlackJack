@@ -1,9 +1,6 @@
 from getkey import getkey
-#from colorama import init, Fore
 import random, os, time, errno
 
-#print(f"Cash: ${playerCash}\n Wins: {wins}\n──────────────────────────────────\n")
-# ❤🧡❌🔺🔻💚💜🖤🤍💙💛🧙‍♂️🤑😢😭😦😧🤠🎰💵💰📊📩  ❮⮤🟈
 
 version = "Version 2.1"
 streak = 0
