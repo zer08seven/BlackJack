@@ -1,7 +1,6 @@
 from getkey import getkey
 import random, os, time, errno
 
-
 version = "Version 2.1"
 streak = 0
 blackjacks = 0
@@ -22,8 +21,6 @@ light_brown = rgb(190,140,100)
 brown = rgb(170,120,80)
 golden = rgb(219,180,107)
 red = rgb(255,0,0)
-
-
 
 try:
     os.makedirs("./data")
@@ -110,7 +107,7 @@ def game():
 
     def winDouble():
         global playerCash, betCash, wins, streak, blackjacks
-        playerCash = int(playerCash) + betCash + betCash + + betCash
+        playerCash = int(playerCash) + betCash + betCash + betCash
         streak = int(streak) + 1
         wins = int(wins) + 1
 
@@ -273,11 +270,8 @@ def game():
                 draw()
                 end()
 
-
-
     def standDouble():
         global playerCash, wins, streak, blackjacks
-        
         checkDealerValues()
         checkPlayerValues()
         print(f"Dealer Hand: {dealerHand[0:90]} for a total of {dealerHandValue}")
@@ -304,8 +298,6 @@ def game():
             elif dealerHandValue > playerHandValue:
                 print("\ndealer wins")
                 streak = 0
-                
-                 
                 end()
             elif dealerHandValue == playerHandValue:
                 print("\nDraw!")
@@ -313,11 +305,8 @@ def game():
                 draw()
                 end()
                 
-           
-
     def hit():
         global playerCash, wins, streak, blackjacks
-        
         shufflePlayer()
         checkPlayerValues()
         print(f"\nPlayer new card: {playerHand[0:9]} for a total of: {playerHandValue}")
@@ -329,10 +318,9 @@ def game():
             end()
         elif playerHandValue == 21:
             stand()
-
+            
     def double():
         global playerCash, wins, streak, blackjacks, betCash
-
         if playerCash <  betCash:
             hit()
         else: 
@@ -368,20 +356,16 @@ def game():
         if key == "s":
             stand()
         elif key == "a":
-            hit()
-
-
-        
+            hit()   
+            
     bet()
     shuffleDealer()
     shufflePlayer()
     shuffleDealer()
     shufflePlayer()
-
     checkDealerValues()
     checkPlayerValues()
 
-   
     time.sleep(1)
     print(f"\n\nDealer Hand: [{dealerHand[0]}, ?]")
     time.sleep(1)
@@ -396,8 +380,6 @@ def game():
           end()
     else:
           menu()
-    
-
     
 def startUI():
     global playerCash, wins, streak, blackjacks
