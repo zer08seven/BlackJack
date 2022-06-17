@@ -5,7 +5,7 @@ version = "Version 2.1"
 streak = 0
 blackjacks = 0
 wins = 0
-playerCash = 20
+playerCash = 75
 Deck = [2,3,4,5,6,7,8,9,10,"J","Q","K","A",2,3,4,5,6,7,8,9,10,"J","Q","K","A",2,3,4,5,6,7,8,9,10,"J","Q","K","A",2,3,4,5,6,7,8,9,10,"J","Q","K","A"]
 dealerHand=[]
 playerHand=[]
@@ -409,6 +409,7 @@ def startUI():
                           🤠 Start [A]
                           📊 Stats [S]
                           📩 Load  [D]
+                          ❌ Quit  [Q]
               
 ♣ ────────────────────────────────────────────────────────────── ♥
                          Made with ❤  By github.com/zer08seven """)
@@ -418,6 +419,8 @@ def startUI():
         stats()
     elif key == "d":
         load()
+    elif key == "q":
+        exit("Player left the game")
     else: game()   
         
 startUI()
